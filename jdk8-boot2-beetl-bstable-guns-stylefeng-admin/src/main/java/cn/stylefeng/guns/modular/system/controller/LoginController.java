@@ -29,6 +29,8 @@ import cn.stylefeng.guns.modular.system.service.IUserService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import com.google.code.kaptcha.Constants;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +49,7 @@ import static cn.stylefeng.roses.core.util.HttpContext.getIp;
  * @author fengshuonan
  * @Date 2017年1月10日 下午8:25:24
  */
+//@Api("登录")
 @Controller
 public class LoginController extends BaseController {
 

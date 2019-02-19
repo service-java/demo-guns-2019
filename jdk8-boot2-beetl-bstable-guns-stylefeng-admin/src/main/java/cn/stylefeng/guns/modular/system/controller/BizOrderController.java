@@ -1,14 +1,13 @@
 package cn.stylefeng.guns.modular.system.controller;
 
 import cn.stylefeng.roses.core.base.controller.BaseController;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
 import cn.stylefeng.guns.core.log.LogObjectHolder;
-import org.springframework.web.bind.annotation.RequestParam;
 import cn.stylefeng.guns.modular.system.model.BizOrder;
 import cn.stylefeng.guns.modular.system.service.IBizOrderService;
 
@@ -18,6 +17,7 @@ import cn.stylefeng.guns.modular.system.service.IBizOrderService;
  * @author fengshuonan
  * @Date 2018-12-19 12:16:03
  */
+@Api("订单管理")
 @Controller
 @RequestMapping("/bizOrder")
 public class BizOrderController extends BaseController {
@@ -49,7 +49,7 @@ public class BizOrderController extends BaseController {
     @RequestMapping("/bizOrder_update/{bizOrderId}")
     public String bizOrderUpdate(@PathVariable Integer bizOrderId, Model model) {
         BizOrder bizOrder = bizOrderService.selectById(bizOrderId);
-        model.addAttribute("item",bizOrder);
+        model.addAttribute("item", bizOrder);
         LogObjectHolder.me().set(bizOrder);
         return PREFIX + "bizOrder_edit.html";
     }
@@ -66,8 +66,9 @@ public class BizOrderController extends BaseController {
     /**
      * 新增
      */
-    @RequestMapping(value = "/add")
+    @PostMapping(value = "/add")
     @ResponseBody
+    @ApiOperation("新增订单")
     public Object add(BizOrder bizOrder) {
         bizOrderService.insert(bizOrder);
         return SUCCESS_TIP;
@@ -78,6 +79,7 @@ public class BizOrderController extends BaseController {
      */
     @RequestMapping(value = "/delete")
     @ResponseBody
+//    @ApiOperation("删除订单")
     public Object delete(@RequestParam Integer bizOrderId) {
         bizOrderService.deleteById(bizOrderId);
         return SUCCESS_TIP;

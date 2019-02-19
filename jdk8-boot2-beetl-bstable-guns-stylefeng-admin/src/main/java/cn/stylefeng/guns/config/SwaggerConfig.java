@@ -15,6 +15,7 @@
  */
 package cn.stylefeng.guns.config;
 
+import com.google.common.base.Predicates;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -43,8 +44,14 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))                         //这里采用包含注解的方式来确定要显示的接口
-                //.apis(RequestHandlerSelectors.basePackage("cn.stylefeng.guns.modular.system.controller"))    //这里采用包扫描的方式来确定要显示的接口
+
+//                .apis(Predicates.not(RequestHandlerSelectors.basePackage("org.springframework.boot")))
+//                .apis(RequestHandlerSelectors.any())
+                // 包含注解 确定要显示的接口
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                // 包扫描确定要显示的接口
+//                .apis(RequestHandlerSelectors.basePackage("cn.stylefeng.guns.modular.system.controller"))
+
                 .paths(PathSelectors.any())
                 .build();
     }

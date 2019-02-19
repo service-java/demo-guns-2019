@@ -38,6 +38,7 @@ nb-configuration.xml
 
 # Maven
 log/
+*.log
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -57,4 +58,6 @@ upload
 uploads
 out
 
+# Custom
+guns-logs
 rebel.xml
