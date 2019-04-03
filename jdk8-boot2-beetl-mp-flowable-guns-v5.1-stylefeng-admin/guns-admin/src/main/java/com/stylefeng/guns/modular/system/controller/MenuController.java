@@ -18,14 +18,13 @@ import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.model.Menu;
 import com.stylefeng.guns.modular.system.service.IMenuService;
 import com.stylefeng.guns.modular.system.warpper.MenuWarpper;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -37,6 +36,7 @@ import java.util.Map;
  * @author fengshuonan
  * @Date 2017年2月12日21:59:14
  */
+@Api(tags = "菜单控制器")
 @Controller
 @RequestMapping("/menu")
 public class MenuController extends BaseController {
@@ -125,8 +125,9 @@ public class MenuController extends BaseController {
     /**
      * 新增菜单
      */
+    @ApiOperation("菜单新增")
     @Permission(Const.ADMIN_NAME)
-    @RequestMapping(value = "/add")
+    @PostMapping(value = "/add")
     @BussinessLog(value = "菜单新增", key = "name", dict = MenuDict.class)
     @ResponseBody
     public Tip add(@Valid Menu menu, BindingResult result) {
