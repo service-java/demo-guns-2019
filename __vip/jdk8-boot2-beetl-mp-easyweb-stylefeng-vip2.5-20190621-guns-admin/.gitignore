@@ -38,3 +38,6 @@ hs_err_pid*
 _dockerCerts/
 
 .factorypath
+
+# 自定义
+!log/
