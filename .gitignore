@@ -37,7 +37,8 @@ nb-configuration.xml
 .DS_Store
 
 # Maven
-log/
+# guns中存在log目录 不忽略处理
+# log/
 *.log
 target/
 pom.xml.tag
