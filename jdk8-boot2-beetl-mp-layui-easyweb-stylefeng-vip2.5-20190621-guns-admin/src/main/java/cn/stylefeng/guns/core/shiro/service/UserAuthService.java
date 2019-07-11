@@ -16,7 +16,7 @@
 package cn.stylefeng.guns.core.shiro.service;
 
 import cn.stylefeng.guns.core.shiro.ShiroUser;
-import cn.stylefeng.guns.modular.system.entity.User;
+import cn.stylefeng.guns.modules.system.entity.User;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 
 import java.util.List;

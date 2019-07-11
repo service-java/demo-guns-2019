@@ -81,7 +81,7 @@
 3. 利用beetl模板引擎对前台页面进行封装和拆分，使臃肿的html代码变得简洁，更加易维护。
 4. 对常用js插件进行二次封装，使js代码变得简洁，更加易维护，具体请见webapp/static/js/common文件夹内js代码。
 5. 利用ehcache框架对经常调用的查询进行缓存，提升运行速度，具体请见ConstantFactory类中@Cacheable标记的方法。
-6. controller层采用map + warpper方式的返回结果，返回给前端更为灵活的数据，具体参见com.stylefeng.guns.modular.system.warpper包中具体类。
+6. controller层采用map + warpper方式的返回结果，返回给前端更为灵活的数据，具体参见com.stylefeng.guns.modules.system.warpper包中具体类。
 7. 防止XSS攻击，通过XssFilter类对所有的输入的非法字符串进行过滤以及替换。
 8. 简单可用的代码生成体系，通过SimpleTemplateEngine可生成带有主页跳转和增删改查的通用控制器、html页面以及相关的js，还可以生成Service和Dao，并且这些生成项都为可选的，通过ContextConfig下的一些列xxxSwitch开关，可灵活控制生成模板代码，让您把时间放在真正的业务上。
 9. 控制器层统一的异常拦截机制，利用@ControllerAdvice统一对异常拦截，具体见com.stylefeng.guns.core.aop.GlobalExceptionHandler类。
@@ -141,7 +141,7 @@
         </div>
     </div>
 </div>
-<script src="${ctxPath}/static/modular/system/dept/dept.js"></script>
+<script src="${ctxPath}/static/modules/system/dept/dept.js"></script>
 @}
 ```
 以上beetl的用法请参考beetl说明文档。

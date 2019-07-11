@@ -29,8 +29,8 @@ spring:
       max-file-size: 100MB
 
 mybatis-plus:
-  typeAliasesPackage: cn.stylefeng.guns.modular.system.model
-  mapper-locations: classpath:cn/stylefeng/guns/modular/**/mapping/*.xml
+  typeAliasesPackage: cn.stylefeng.guns.modules.system.model
+  mapper-locations: classpath:cn/stylefeng/guns/modules/**/mapping/*.xml
 
 log:
   path: guns-logs

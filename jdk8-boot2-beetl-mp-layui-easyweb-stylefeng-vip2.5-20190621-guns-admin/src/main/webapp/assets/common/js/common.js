@@ -86,7 +86,7 @@ Feng.closeAllLoading = function () {
 
 // 以下代码是配置layui扩展模块的目录，每个页面都需要引入
 layui.config({
-    base: Feng.ctxPath + '/assets/common/module/'
+    base: Feng.ctxPath + '/assets/common/modules/'
 }).extend({
     formSelects: 'formSelects/formSelects-v4',
     treetable: 'treetable-lay/treetable',
@@ -96,9 +96,9 @@ layui.config({
     dtree: 'dtree/dtree',
     citypicker: 'city-picker/city-picker',
     tableSelect: 'tableSelect/tableSelect',
-    selectPlus: '../../expand/module/selectPlus/selectPlus',
-    ax: '../../expand/module/ax/ax',
-    ztree: '../../expand/module/ztree/ztree-object'
+    selectPlus: '../../expand/modules/selectPlus/selectPlus',
+    ax: '../../expand/modules/ax/ax',
+    ztree: '../../expand/modules/ztree/ztree-object'
 }).use(['admin'], function () {
     var $ = layui.jquery;
     var admin = layui.admin;

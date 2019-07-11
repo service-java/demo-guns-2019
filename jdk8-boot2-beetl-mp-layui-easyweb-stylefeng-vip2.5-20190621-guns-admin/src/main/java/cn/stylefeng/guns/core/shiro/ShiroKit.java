@@ -18,7 +18,7 @@ package cn.stylefeng.guns.core.shiro;
 import cn.stylefeng.guns.core.common.constant.Const;
 import cn.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import cn.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import cn.stylefeng.guns.modular.system.entity.User;
+import cn.stylefeng.guns.modules.system.entity.User;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.exception.ServiceException;
 import org.apache.shiro.SecurityUtils;

@@ -1,13 +1,11 @@
 package cn.stylefeng.guns.system;
 
 import cn.stylefeng.guns.base.BaseJunit;
-import cn.stylefeng.guns.modular.system.entity.Dept;
-import cn.stylefeng.guns.modular.system.mapper.DeptMapper;
+import cn.stylefeng.guns.modules.system.entity.Dept;
+import cn.stylefeng.guns.modules.system.mapper.DeptMapper;
 import org.junit.Test;
 
 import javax.annotation.Resource;
-import java.util.List;
-import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

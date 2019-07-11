@@ -17,8 +17,8 @@ package cn.stylefeng.guns.core.log.factory;
 
 import cn.stylefeng.guns.core.common.constant.state.LogSucceed;
 import cn.stylefeng.guns.core.common.constant.state.LogType;
-import cn.stylefeng.guns.modular.system.entity.LoginLog;
-import cn.stylefeng.guns.modular.system.entity.OperationLog;
+import cn.stylefeng.guns.modules.system.entity.LoginLog;
+import cn.stylefeng.guns.modules.system.entity.OperationLog;
 
 import java.util.Date;
 

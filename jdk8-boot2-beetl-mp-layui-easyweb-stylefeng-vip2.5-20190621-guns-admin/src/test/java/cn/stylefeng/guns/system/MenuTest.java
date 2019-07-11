@@ -1,8 +1,8 @@
 package cn.stylefeng.guns.system;
 
 import cn.stylefeng.guns.base.BaseJunit;
-import cn.stylefeng.guns.modular.system.entity.Menu;
-import cn.stylefeng.guns.modular.system.mapper.MenuMapper;
+import cn.stylefeng.guns.modules.system.entity.Menu;
+import cn.stylefeng.guns.modules.system.mapper.MenuMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

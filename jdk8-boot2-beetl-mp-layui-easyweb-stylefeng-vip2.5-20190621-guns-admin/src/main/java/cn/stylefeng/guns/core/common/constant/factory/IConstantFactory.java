@@ -15,8 +15,8 @@
  */
 package cn.stylefeng.guns.core.common.constant.factory;
 
-import cn.stylefeng.guns.modular.system.entity.Dict;
-import cn.stylefeng.guns.modular.system.entity.Menu;
+import cn.stylefeng.guns.modules.system.entity.Dict;
+import cn.stylefeng.guns.modules.system.entity.Menu;
 
 import java.util.List;
 
