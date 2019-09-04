@@ -1,0 +1,10 @@
+*.iml
+**/target
+**/node_modules
+
+.idea
+package-lock.json
+docs/.vuepress/dist
+**/dist
+
+!flash-generator/idea-plugin.jar
